@@ -7,16 +7,13 @@ public class ProductOrderMain2 {
 
         ProductOrder[] orders = new ProductOrder[3];
 
-        ProductOrder order1 = creatOrder("김치",2,2000);
-        ProductOrder order2 = creatOrder("두부",1,5000);
-        ProductOrder order3 = creatOrder("콜라",2,1500);
-        orders[0] = order1;
-        orders[1] = order2;
-        orders[2] = order3;
+        orders[0] = creatOrder("김치",2,2000);
+        orders[1] = creatOrder("두부",1,5000);
+        orders[2] = creatOrder("콜라",2,1500);
 
         printOrders(orders);
-        System.out.println("총 결제 금액  = " + getTotalAmount(orders));
-
+        int totalAmount = getTotalAmount(orders);   // opt+cmd+v 
+        System.out.println("총 결제 금액  = " + totalAmount);
     }
 
     static ProductOrder creatOrder(String productName, int price, int quantity) {
