@@ -7,9 +7,10 @@ public class MemberConstruct {
 
     // 추가
     MemberConstruct(String name, int age) {
-        this.name = name;
-        this.age = age;
-        this.grade = 50;
+        this(name, age, 50);    // 변경 - 생성자 내부에서 다른 생성자 호출 가능
+//        this.name = name;
+//        this.age = age;
+//        this.grade = 50;
     }
 
     MemberConstruct(String name, int age, int grade) {
